@@ -1,6 +1,23 @@
 {
   "name": "next-vue-device-detector",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "private": false,
+  "files": [
+    "dist/*",
+    "src/*",
+    "types/*.d.ts",
+    "package.json",
+    "*.js",
+    "README.md"
+  ],
+  "main": "./dist/next-vue-device-detector.umd.js",
+  "module": "./dist/next-vue-device-detector.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/next-vue-device-detector.es.js",
+      "require": "./dist/next-vue-device-detector.umd.js"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
@@ -16,5 +33,28 @@
     "typescript": "^4.4.3",
     "vite": "^2.6.4",
     "vue-tsc": "^0.3.0"
+  },
+  "description": "A tiny device detector plugin of vue 3 for mobile",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dreambo8563/next-vue-device-detector.git"
+  },
+  "keywords": [
+    "vue 3",
+    "device",
+    "mobile",
+    "useragent"
+  ],
+  "typings": "src/types/index.d.ts",
+  "author": "dreambo8563",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dreambo8563/next-vue-device-detector/issues"
+  },
+  "homepage": "https://github.com/dreambo8563/next-vue-device-detector#readme",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
